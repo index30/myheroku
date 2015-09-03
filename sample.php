@@ -12,7 +12,7 @@
 /* ---------------- 以下、変更部分 ------------------------------ */
 
 // 自分のアプリID
-$APP_ID      = "1082479297214328200q";
+$APP_ID = "1082479297214328200q";
 
 // 自分のアフィリエイトID
 $AFFILIATE_ID = "144a9906.be5344cb.144a9907.16e937fa";
@@ -21,7 +21,7 @@ $AFFILIATE_ID = "144a9906.be5344cb.144a9907.16e937fa";
 
 // --------- API毎の固定値
 // API名
-$API_NAME    = "楽天商品検索API";
+$API_NAME = "楽天商品検索API";
 
 // APIのURL
 $API_BASE_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222";
@@ -29,27 +29,33 @@ $API_BASE_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/201402
 // --------- リクエストパラメタの取得とAPIへのリクエストURL生成
 
 // リクエストURL生成
+/*$query = array(
+  'format' => "json",
+  'keyword' => $_REQUEST['keyword'],
+  'applicationId' => $APP_ID
+  );*/
 $query = array(
-            'format'        => "json",
-                'keyword'      => $_REQUEST['keyword'],
-                'applicationId' => $APP_ID
+        'format' => "json",
+        'keyword' => $_REQUEST['keyword'],
+        'applicationId' => $APP_ID
 );
+
 $api_url = $API_BASE_URL . "?" . http_build_query($query);
 
 // --------- API取得処理
 
 // 商品検索ボタンを押された時、APIにリクエストを投げる
 if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
-            $contents = file_get_contents($api_url);
-                $data = json_decode($contents, true);
+        $contents = file_get_contents($api_url);
+        $data = json_decode($contents, true);
                 
-                    // 連想配列から値を取得
-                    if ($data) {
-                                    // 検索数
-                                    $count = $data['count'];
-                                            // 商品情報
-                                            $item_list = $data['Items'];
-                                                }
+        // 連想配列から値を取得
+        if ($data) {
+                // 検索数
+                $count = $data['count'];
+                // 商品情報
+                $item_list = $data['Items'];
+                }
 }
 
 // ここからHTML表示部分
