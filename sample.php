@@ -12,7 +12,7 @@
 /* ---------------- 以下、変更部分 ------------------------------ */
 
 // 自分のアプリID
-$APP_ID = "1082479297214328200";
+$APP_ID = "1063532612527752133";
 
 // 自分のアフィリエイトID
 $AFFILIATE_ID = "144a9906.be5344cb.144a9907.16e937fa";
@@ -74,7 +74,7 @@ header("Content-type:text/html;charset=UTF-8");
           <!--/タイトル -->
 
           <!-- HTMLフォーム表示 -->
-          <form action="./index.php" method="post">
+          <form action="./sample.php" method="post">
             <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 5px 0pt 0pt 0px;">
               <tr>
                 <td bgcolor="#afafaf  ">
