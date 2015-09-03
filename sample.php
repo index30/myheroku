@@ -21,7 +21,8 @@ $AFFILIATE_ID = "144a9906.be5344cb.144a9907.16e937fa";
 
 // --------- API毎の固定値
 // API名
-$API_NAME = "楽天商品検索API";
+//$API_NAME = "楽天商品検索API";
+$API_NAME = "楽天商品検索API";
 
 // APIのURL
 $API_BASE_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222";
@@ -37,7 +38,7 @@ $API_BASE_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/201402
 $query = array(
         'format' => "json",
         'keyword' => $_REQUEST['keyword'],
-        'applicationId' => $APP_ID
+        'applicationId' => $APP_ID,
 );
 
 $api_url = $API_BASE_URL . "?" . http_build_query($query);
@@ -55,7 +56,7 @@ if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
                 $count = $data['count'];
                 // 商品情報
                 $item_list = $data['Items'];
-                }
+        }
 }
 
 // ここからHTML表示部分
