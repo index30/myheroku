@@ -47,16 +47,16 @@ $api_url = $API_BASE_URL . "?" . http_build_query($query);
 
 // 商品検索ボタンを押された時、APIにリクエストを投げる
 if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
-        $contents = file_get_contents($api_url);
-        $data = json_decode($contents, true);
-        echo $contents;        
-        // 連想配列から値を取得
-        if ($data) {
-                // 検索数
-                $count = $data['count'];
-                // 商品情報
-                $item_list = $data['Items'];
-        }
+     $contents = file_get_contents($api_url);
+     $data = json_decode($contents, true);
+     echo $contents;        
+     // 連想配列から値を取得
+     if ($data) {
+        // 検索数
+        $count = $data['count'];
+        // 商品情報
+        $item_list = $data['Items'];
+     }
 }
 
 // ここからHTML表示部分
