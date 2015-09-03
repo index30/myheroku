@@ -48,7 +48,7 @@ $api_url = $API_BASE_URL . "?" . http_build_query($query);
 if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
         $contents = file_get_contents($api_url);
         $data = json_decode($contents, true);
-                
+        echo $contents;        
         // 連想配列から値を取得
         if ($data) {
                 // 検索数
