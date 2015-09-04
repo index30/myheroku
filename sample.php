@@ -25,6 +25,7 @@ $API_NAME = "楽天商品検索API";
 
 // APIのURL
 $API_BASE_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222";
+$TEST_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?format=json&keyword=%E6%A5%BD%E5%A4%A9&genreId=559887&shopCode=rakuten24&applicationId=1063532612527752133";
 
 // --------- リクエストパラメタの取得とAPIへのリクエストURL生成
 
@@ -41,16 +42,17 @@ $api_url = $API_BASE_URL . "?" . http_build_query($query);
 
 // 商品検索ボタンを押された時、APIにリクエストを投げる
 if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
-     $contents = file_get_contents($api_url);
-     $data = json_decode($contents, true);
-     echo $contents;        
-     // 連想配列から値を取得
-     if ($data) {
+    //$contents = file_get_contents($api_url);
+    $contents = file_get_contents($TEST_URL);
+    $data = json_decode($contents, true);
+    echo $contents;        
+    // 連想配列から値を取得
+    if ($data) {
         // 検索数
         $count = $data['count'];
         // 商品情報
         $item_list = $data['Items'];
-     }
+    }
 }
 
 // ここからHTML表示部分
