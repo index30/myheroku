@@ -33,7 +33,7 @@ $TEST_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?f
 $query = array(
         'format' => "json",
         'keyword' => $_REQUEST['keyword'],
-        'applicationId' => $APP_ID
+        'applicationId' => $APP_ID,
 );
 
 $api_url = $API_BASE_URL . "?" . http_build_query($query);
