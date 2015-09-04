@@ -94,7 +94,7 @@ header("Content-type:text/html;charset=UTF-8");
       <font style="font-size: 14px;">
       <?php if ($count > 0) : ?>
 	取得件数: <?php echo number_format($count); ?>件<br>
-	    <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 5px 0pt 0pt 0px;">
+	    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 5px 0pt 0pt 0px;">
 	        <tr>
 	            <td bgcolor="#afafaf  ">
 	                <table width="100%" border=0 cellspacing=1 cellpadding=5 style="font-size: 12px;">
