@@ -45,7 +45,7 @@ if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
     //$contents = file_get_contents($api_url);
     $contents = file_get_contents($TEST_URL);
     $data = json_decode($contents, true);
-    echo $contents;        
+    //echo $contents;        
     // 連想配列から値を取得
     if ($data) {
         // 検索数
