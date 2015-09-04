@@ -12,7 +12,6 @@
 /* ---------------- 以下、変更部分 ------------------------------ */
 
 // 自分のアプリID
-//$APP_ID = "1063532612527752133";
 $APP_ID = "1063532612527752133";
 
 // 自分のアフィリエイトID
@@ -34,7 +33,7 @@ $TEST_URL = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?f
 $query = array(
         'format' => "json",
         'keyword' => $_REQUEST['keyword'],
-        'applicationId' => $APP_ID,//"1063532612527752133",//$APP_ID,
+        'applicationId' => $APP_ID,
 );
 
 $api_url = $API_BASE_URL . "?" . http_build_query($query);
@@ -43,8 +42,6 @@ $api_url = $API_BASE_URL . "?" . http_build_query($query);
 
 // 商品検索ボタンを押された時、APIにリクエストを投げる
 if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
-    print_r($api_url);
-    print_r($query);
     $contents = file_get_contents($api_url);
     //$contents = file_get_contents($TEST_URL);
     $data = json_decode($contents, true);
