@@ -42,8 +42,8 @@ $api_url = $API_BASE_URL . "?" . http_build_query($query);
 
 // 商品検索ボタンを押された時、APIにリクエストを投げる
 if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == "商品検索") {
-    echo $api_url;
-    echo $query;
+    print_r($api_url);
+    print_r($query);
     $contents = file_get_contents($api_url);
     //$contents = file_get_contents($TEST_URL);
     $data = json_decode($contents, true);
