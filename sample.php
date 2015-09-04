@@ -72,10 +72,10 @@ header("Content-type:text/html;charset=UTF-8");
     
       <!-- HTMLフォーム表示 -->
       <form action="./sample.php" method="post">
-          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 5px 0pt 0pt 0px;">
+          <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 5px 0pt 0pt 0px;">
 	      <tr>
 	          <td bgcolor="#afafaf  ">
-	              <table width="60%" border=0 cellspacing=1 cellpadding=5 style="font-size: 12px;">
+	              <table width="100%" border=0 cellspacing=1 cellpadding=5 style="font-size: 12px;">
 	                  <tr>
 		              <td style="background-color: #eeeeee  ;">検索キーワード</td>
 		              <td style="background-color: #ffffff  ;">
@@ -97,7 +97,7 @@ header("Content-type:text/html;charset=UTF-8");
 	    <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 5px 0pt 0pt 0px;">
 	        <tr>
 	            <td bgcolor="#afafaf  ">
-	                <table width="60%" border=0 cellspacing=1 cellpadding=5 style="font-size: 12px;">
+	                <table width="100%" border=0 cellspacing=1 cellpadding=5 style="font-size: 12px;">
 		            <tr align="center" style="background-color: #eeeeee  ;">
 		                <td width="8%">写真</td>
 		                <td width="47%">商品名</td>
